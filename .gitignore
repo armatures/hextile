@@ -1,1 +1,24 @@
+# taken from: https://gist.github.com/kleber-swf/6e62de2ed95cd2c0f2de#file-gitignore
+# =============== #
+# Unity generated #
+# =============== #
 Temp/
+Obj/
+Build
+Library/
+sysinfo.txt
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
