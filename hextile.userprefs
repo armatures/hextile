@@ -1,10 +1,38 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/GameController.cs">
     <Files>
-      <File FileName="Assets/_scripts/GameController.cs" Line="31" Column="2" />
-      <File FileName="../space_shooter/Assets.bak/_scripts/GameController.cs" Line="9" Column="28" />
+      <File FileName="Assets/_scripts/Board.cs" Line="17" Column="4" />
+      <File FileName="Assets/_scripts/GameController.cs" Line="19" Column="5" />
+      <File FileName="../space_shooter/Assets.bak/_scripts/GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/BoardTest.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="_scripts" expanded="True">
+              <Node name="GameController.cs" selected="True" />
+            </Node>
+          </Node>
+          <Node name="Assembly-CSharp-Editor" expanded="True">
+            <Node name="Editor" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

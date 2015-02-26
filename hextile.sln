@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{AD3709F3-111A-5228-1F54-67450B2D1B20}") = "hextile", "Assembly-CSharp.csproj", "{98E69BB4-2174-C615-05F4-6F7A658E382F}"
 EndProject
+Project("{AD3709F3-111A-5228-1F54-67450B2D1B20}") = "hextile", "Assembly-CSharp-Editor.csproj", "{BA1857DD-AB2B-E8D8-A7B6-746BC56BC34A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{98E69BB4-2174-C615-05F4-6F7A658E382F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98E69BB4-2174-C615-05F4-6F7A658E382F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98E69BB4-2174-C615-05F4-6F7A658E382F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1857DD-AB2B-E8D8-A7B6-746BC56BC34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1857DD-AB2B-E8D8-A7B6-746BC56BC34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1857DD-AB2B-E8D8-A7B6-746BC56BC34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1857DD-AB2B-E8D8-A7B6-746BC56BC34A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+																								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

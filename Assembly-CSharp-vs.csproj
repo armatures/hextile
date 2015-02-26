@@ -46,9 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_scripts\Board.cs" />
      <Compile Include="Assets\_scripts\GameController.cs" />
+     <None Include="Assets\test-results\Assembly-CSharp-Editor.csproj-Debug-2015-02-22.xml" />
+     <None Include="Assets\test-results\Assembly-CSharp.csproj-Debug-2015-02-22.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Users/charliebevis/Documents/unity/hextile/Assets/nunit.framework.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
