@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\_scripts\Board.cs" />
      <Compile Include="Assets\_scripts\GameController.cs" />
+     <Compile Include="Assets\_scripts\TileSelectionHandler.cs" />
      <None Include="Assets\test-results\Assembly-CSharp-Editor.csproj-Debug-2015-02-22.xml" />
      <None Include="Assets\test-results\Assembly-CSharp.csproj-Debug-2015-02-22.xml" />
  <Reference Include="UnityEngine.UI">

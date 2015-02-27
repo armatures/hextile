@@ -16,12 +16,12 @@ public class GameController : MonoBehaviour {
 			{
 				Vector3 position = board.positionForIndex(x,z);
 				Debug.Log ("color: " + basicHex.renderer.material.color);
-				if(x == 2) {
-					GameObject clone = (GameObject) Instantiate(basicHex, position, baseRotation);
-					clone.renderer.material.SetColor("_Color", Color.blue);
-				} else {
+//				if(x == 2) {
+//					GameObject clone = (GameObject) Instantiate(basicHex, position, baseRotation);
+//					clone.renderer.material.SetColor("_Color", Color.blue);
+//				} else {
 					Instantiate(basicHex, position, baseRotation);
-				}
+//				}
 			}
 		}
 	}
@@ -30,6 +30,4 @@ public class GameController : MonoBehaviour {
 	void Update () {
 	
 	}
-
-
 }
