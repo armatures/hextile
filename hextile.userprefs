@@ -1,18 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/GameController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/selectShader.shader">
     <Files>
+      <File FileName="Assets/_scripts/TileSelectionHandler.cs" Line="1" Column="1" />
       <File FileName="Assets/_scripts/Board.cs" Line="1" Column="1" />
-      <File FileName="Assets/_scripts/GameController.cs" Line="32" Column="3" />
+      <File FileName="Assets/_scripts/GameController.cs" Line="1" Column="1" />
       <File FileName="../space_shooter/Assets.bak/_scripts/GameController.cs" Line="1" Column="1" />
       <File FileName="Assets/Editor/BoardTest.cs" Line="1" Column="1" />
+      <File FileName="Assets/_scripts/selectShader.shader" Line="53" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="_scripts" expanded="True">
-              <Node name="GameController.cs" selected="True" />
+              <Node name="selectShader.shader" selected="True" />
             </Node>
           </Node>
           <Node name="Assembly-CSharp-Editor" expanded="True">
