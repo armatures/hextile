@@ -22,4 +22,6 @@
 sysinfo.txt
 
 # Charlie doesn't want to follow these I guess
-/test-results/
+test-results/
+*/test-results/*
+*/test-results.meta
