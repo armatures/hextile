@@ -6,9 +6,10 @@ namespace Application
 	public class Board
 	{
 		private float blenderUnit = 1f;
-
+		private Tile[] tiles;
 		public Board ()
 		{
+			tiles = new Tile[]{};
 		}
 
 		public Vector3 positionForIndex(int row, int column) {
@@ -19,6 +20,15 @@ namespace Application
 			                   0,
 			                   column * 0.87f);
 		}
+
+		public bool IsEmpty {
+			get {
+				return tiles.Length == 0;
+			}
+		}
+	}
+
+	public class Tile{
 	}
 }
 
