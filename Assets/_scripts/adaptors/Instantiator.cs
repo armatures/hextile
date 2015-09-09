@@ -3,11 +3,14 @@ using UnityEngine;
 
 namespace Adaptors	
 {
-	public class Instantiator : MonoBehaviour { //basically wrapping and currying the static global Instantiate() method
+	public class Instantiator : ScriptableObject { //basically wrapping and currying the static global Instantiate() method
 		private Quaternion _rotation{ get; set; }
 		private GameObject _objectToInstantiate{ get; set; }
 		
-		public Instantiator(GameObject objectToInstantiate, Quaternion rotation){
+		public Instantiator(){
+		}
+
+		public void init(GameObject objectToInstantiate, Quaternion rotation){
 			_rotation = rotation;
 			_objectToInstantiate = objectToInstantiate;
 		}

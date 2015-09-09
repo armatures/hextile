@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour {
 
 	void Start () {
 		Quaternion baseRotation = new Quaternion (0, 0, 0, 0);
-		Instantiator instantiator = new Instantiator(basicHex, baseRotation);
+			Instantiator instantiator = ScriptableObject.CreateInstance<Instantiator> () as Instantiator;
+			instantiator.init(basicHex, baseRotation);
 
 		for (int z = 0; z<tileLayout.Length; z++)
 		{
