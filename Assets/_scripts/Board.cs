@@ -15,12 +15,13 @@ namespace Application
 		}
 
 		public static  Board Hexagon (int sideLength) {
-			return new Board ();
+			var board = new Board ();
+			board.AddTile (new Location (0, 0), new Tile ());
+			return board;
 		}
 
 		public static Board NewEmpty(){
 			var board = new Board ();
-			board.AddTile (new Location (0, 0), new Tile ());
 			return board;
 		}
 
