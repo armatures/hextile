@@ -8,13 +8,20 @@ namespace Application
 	{
 		private float blenderUnit = 1f;
 		private Dictionary<Location,Tile> tiles;
-		public static Board NewEmpty(){
-			return new Board();
-		}
 
 		public Board ()
 		{
 			tiles = new Dictionary<Location, Tile>(){};
+		}
+
+		public static  Board Hexagon (int sideLength) {
+			return new Board ();
+		}
+
+		public static Board NewEmpty(){
+			var board = new Board ();
+			board.AddTile (new Location (0, 0), new Tile ());
+			return board;
 		}
 
 		public Vector3 positionForIndex(Location location) {
