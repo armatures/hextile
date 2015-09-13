@@ -10,7 +10,7 @@ namespace Application
 		[Test()]
 		public void PositionForOriginIsAbsolute ()
 		{
-			Board board = new Board ();
+			Board board = Board.NewEmpty();
 
 			Vector3 expected = new Vector3 (0.5f, 0, 0);
 			Assert.AreEqual(expected, board.positionForIndex(0,0) );
@@ -21,6 +21,16 @@ namespace Application
 			Board board = new Board ();
 
 			Assert.IsTrue (board.IsEmpty);
+		}
+
+		[Test()]
+		public void TilesCollectionIsExposed ()
+		{
+			Board board = Board.NewEmpty ();
+			var location = new Location (0, 0);
+			var tile = new Tile ();
+			board.AddTile (location, tile);
+			board.GetTile (location);
 		}
 	}
 }

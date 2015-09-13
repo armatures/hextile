@@ -8,9 +8,13 @@ namespace Application
 	{
 		private float blenderUnit = 1f;
 		private Dictionary<Location,Tile> tiles;
+		public static Board NewEmpty(){
+			return new Board();
+		}
+
 		public Board ()
 		{
-			tiles = new Dictionary<Location,Tile>{};
+			tiles = new Dictionary<Location, Tile>(){};
 		}
 
 		public Vector3 positionForIndex(int row, int column) {
@@ -27,11 +31,18 @@ namespace Application
 				return tiles.Count == 0;
 			}
 		}
+
+		public void AddTile(Location location, Tile tile){
+			tiles.Add (location,tile);
+		}
+
+		public Tile GetTile(Location location)
+		{
+			return tiles [location];
+		}
 	}
 
 	public class Tile{
 	}
-
-	public class Location{}
 }
 
