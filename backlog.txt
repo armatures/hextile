@@ -1,0 +1,2 @@
+[] render the collection of tiles in Board instead of doing setup in the GameController
+[] Board.HexMap(3) should give a hexagonal board with sides of length 3
