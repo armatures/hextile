@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Application
@@ -6,10 +7,10 @@ namespace Application
 	public class Board
 	{
 		private float blenderUnit = 1f;
-		private Tile[] tiles;
+		private Dictionary<Location,Tile> tiles;
 		public Board ()
 		{
-			tiles = new Tile[]{};
+			tiles = new Dictionary<Location,Tile>{};
 		}
 
 		public Vector3 positionForIndex(int row, int column) {
@@ -23,12 +24,14 @@ namespace Application
 
 		public bool IsEmpty {
 			get {
-				return tiles.Length == 0;
+				return tiles.Count == 0;
 			}
 		}
 	}
 
 	public class Tile{
 	}
+
+	public class Location{}
 }
 
