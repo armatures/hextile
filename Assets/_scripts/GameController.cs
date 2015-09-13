@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour {
 		{
 			for(int x = 0; x<tileLayout[z];x++)
 			{
-				Vector3 position = board.positionForIndex(x,z);
+				Vector3 position = board.positionForIndex(new Location(x,z));
 				instantiator.InstantiateAtPosition(position);
 			}
 		}

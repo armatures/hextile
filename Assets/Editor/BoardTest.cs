@@ -13,7 +13,7 @@ namespace Application
 			Board board = Board.NewEmpty();
 
 			Vector3 expected = new Vector3 (0.5f, 0, 0);
-			Assert.AreEqual(expected, board.positionForIndex(0,0) );
+			Assert.AreEqual(expected, board.positionForIndex(new Location(0,0)) );
 		}
 
 		[Test()]
@@ -24,7 +24,7 @@ namespace Application
 		}
 
 		[Test()]
-		public void TilesCollectionIsExposed ()
+		public void TilesCollectionHasGetTileAndAddTile ()
 		{
 			Board board = Board.NewEmpty ();
 			var location = new Location (0, 0);
