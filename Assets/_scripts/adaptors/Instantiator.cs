@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Adaptors	
 {
-	public class Instantiator : ScriptableObject { //basically wrapping and currying the static global Instantiate() method
+	public class Instantiator : ScriptableObject, IInstantiator { //basically wrapping and currying the static global Instantiate() method
 		private Quaternion _rotation{ get; set; }
 		private GameObject _objectToInstantiate{ get; set; }
 		
