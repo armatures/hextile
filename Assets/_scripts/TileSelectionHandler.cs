@@ -8,10 +8,10 @@ public class TileSelectionHandler : MonoBehaviour {
 
 	void OnMouseUp() {
 		if(selectedObjects.Contains (gameObject)){
-			gameObject.renderer.material.SetColor ("_Color", defaultColor);
+			gameObject.GetComponent<Renderer>().material.SetColor ("_Color", defaultColor);
 			selectedObjects.Remove(gameObject);
 		}else{
-			gameObject.renderer.material.SetColor ("_Color", Color.green);
+			gameObject.GetComponent<Renderer>().material.SetColor ("_Color", Color.green);
 			selectedObjects.Add(gameObject);
 		}
 	}
