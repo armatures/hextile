@@ -17,12 +17,13 @@ namespace Application
 		public static Board Hexagon (int sideLength, IInstantiator instantiator)
 		{
 			var board = new Board ();
-			var hexagon = new []{new Location (0, 0),new Location (0, 1),new Location (0, 2),
+			var hexagon = new []{new Location (0, 0),new Location (0, 1),
 			new Location (1, 0),new Location (1, 1),new Location (1, 2),
-				new Location (2, 1)};
+				new Location(2,0), new Location (2, 1)};
 			foreach (Location location in hexagon) {
 				board.AddTile (location, new Tile ());
-				instantiator.InstantiateAtPosition(positionForIndex(location));
+				var tile = instantiator.InstantiateAtPosition (positionForIndex (location));
+				tile.name = location.summary ();
 			}
 			return board;
 		}
@@ -35,13 +36,13 @@ namespace Application
 
 		public static Vector3 positionForIndex (Location location)
 		{
-			var column = location.Col;
-			float evenRowAdjustment = column % 2 == 0 ? 1f / 2 : 0;
-			float row3Adjustment = column == 2 ? -1f : 0;
+			var row = location.Row;
+			float oddColAdjustment = row % 2 == 0 ? 0 : -1f / 2;
 
-			return new Vector3 (location.Row + evenRowAdjustment + row3Adjustment,
+			return new Vector3 (location.Col + oddColAdjustment,
 			                   0,
-			                   column * 0.87f);
+				row * 0.87f
+			);
 		}
 
 		public bool IsEmpty {

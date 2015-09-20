@@ -18,7 +18,7 @@ namespace Application
 		[Test()]
 		public void PositionForOriginIsAbsolute ()
 		{
-			Vector3 expected = new Vector3 (0.5f, 0, 0);
+			Vector3 expected = new Vector3 (0, 0, 0);
 			Assert.AreEqual (expected, Board.positionForIndex (new Location (0, 0)));
 		}
 
@@ -51,9 +51,9 @@ namespace Application
 		{
 			var board = Board.Hexagon (3, instantiator);
 			var allTiles = new []{
-				new Location (0, 0),new Location (0, 1),new Location (0, 2),
+				new Location (0, 0),new Location (0, 1),
 				new Location (1, 0),new Location (1, 1),new Location (1, 2),
-								  new Location (2, 1)
+								  new Location(2,0), new Location (2, 1)
 			};
 			foreach (Location location in allTiles) {
 				Assert.DoesNotThrow (

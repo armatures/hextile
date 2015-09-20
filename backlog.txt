@@ -1,5 +1,9 @@
+tests are broken on not knowing what Unity.Object.name is
+
+
 [] render the collection of tiles in Board instead of doing setup in the GameController
 [] Board.HexMap(3) should give a hexagonal board with sides of length 3
 
 Can instantiator (or the adaptor interfaces generally) get rid of UnityEngine dependencies?
+making larger boards would probably be easier if 0,0 was in the middle of the board
 
