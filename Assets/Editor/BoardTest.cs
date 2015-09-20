@@ -16,6 +16,12 @@ namespace Application
 		}
 
 		[Test()]
+		public void NamePropertyWorks(){
+			var obj = new UnityEngine.Object();
+			obj.name = "object name";
+		}
+
+		[Test()]
 		public void PositionForOriginIsAbsolute ()
 		{
 			Vector3 expected = new Vector3 (0, 0, 0);
