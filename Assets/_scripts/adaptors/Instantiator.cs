@@ -15,8 +15,8 @@ namespace Adaptors
 			_objectToInstantiate = objectToInstantiate;
 		}
 		
-		public UnityEngine.Object InstantiateAtPosition(Vector3 position){
-			return Instantiate(_objectToInstantiate, position, _rotation);
+		public IUnityEngineObject InstantiateAtPosition(Vector3 position){
+			return new UnityEngineObject(Instantiate(_objectToInstantiate, position, _rotation));
 		}
 	} 
 }

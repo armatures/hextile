@@ -7,18 +7,12 @@ namespace Application
 	[TestFixture()]
 	public class BoardSpec
 	{
-		public Adaptors.IInstantiator instantiator;
+		public Adaptors.FakeInstantiator instantiator;
 
-		[TestFixtureSetUp()]
+		[SetUp()]
 		public void Setup ()
 		{
 			this.instantiator = new Adaptors.FakeInstantiator ();		
-		}
-
-		[Test()]
-		public void NamePropertyWorks(){
-			var obj = new UnityEngine.Object();
-			obj.name = "object name";
 		}
 
 		[Test()]
@@ -40,7 +34,7 @@ namespace Application
 		{
 			Board board = Board.NewEmpty ();
 			var tile = new Tile ();
-			board.AddTile (new Location (0, 0), tile);
+			board.AddTile (instantiator, new Location (0, 0), tile);
 			var fetchedTile = board.GetTile (new Location (0, 0));
 			Assert.AreEqual (tile, fetchedTile);
 		}
@@ -53,7 +47,7 @@ namespace Application
 		}
 
 		[Test()]
-		public void HexagonGivesABoardFullyPopulated ()
+		public void HexagonGivesABoardFullyPopulatedWithRetrievableTiles ()
 		{
 			var board = Board.Hexagon (3, instantiator);
 			var allTiles = new []{
@@ -67,6 +61,17 @@ namespace Application
 					String.Format ("no tile found at location {0}, {1}", location.Row, location.Col)
 				);
 			}
+		}
+
+		[Test()]
+		public void InstantiatorIsCalled7TimesForForTheHexagonConstructor()
+		{
+			Board.Hexagon (3, instantiator);
+			Assert.AreEqual (7, instantiator.InstantiatedObjects.Count);
+			
+			//			foreach (var obj in instantiator.InstantiatedObjects) {
+//				Console.WriteLine (obj.name);
+//			}
 		}
 	}
 }

@@ -1,13 +1,17 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Adaptors
 {
 	public class FakeInstantiator : IInstantiator
 	{
-		public UnityEngine.Object InstantiateAtPosition (Vector3 position)
+		public List<IUnityEngineObject> InstantiatedObjects;
+		public IUnityEngineObject InstantiateAtPosition (Vector3 position)
 		{
-			return new UnityEngine.Object ();
+			var obj = new FakeUnityGameEngineObject ();
+			InstantiatedObjects.Add (obj);
+			return obj;
 		}
 		
 		public void init (GameObject objectToInstantiate, Quaternion rotation)
@@ -17,6 +21,7 @@ namespace Adaptors
 
 		public FakeInstantiator ()
 		{
+			this.InstantiatedObjects = new List<IUnityEngineObject> ();
 		}
 	}
 }

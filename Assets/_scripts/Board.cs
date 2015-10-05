@@ -21,9 +21,7 @@ namespace Application
 			new Location (1, 0),new Location (1, 1),new Location (1, 2),
 				new Location(2,0), new Location (2, 1)};
 			foreach (Location location in hexagon) {
-				board.AddTile (location, new Tile ());
-				var tile = instantiator.InstantiateAtPosition (positionForIndex (location));
-				tile.name = location.summary ();
+				board.AddTile (instantiator, location, new Tile ());
 			}
 			return board;
 		}
@@ -51,9 +49,11 @@ namespace Application
 			}
 		}
 
-		public void AddTile (Location location, Tile tile)
+		public void AddTile (IInstantiator instantiator, Location location, Tile tile)
 		{
 			tiles.Add (location, tile);
+			var newTile = instantiator.InstantiateAtPosition (positionForIndex (location));
+			newTile.name = location.summary ();
 		}
 
 		public Tile GetTile (Location location)
