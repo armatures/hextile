@@ -16,6 +16,12 @@ namespace Application
 		public void LocationsAreNotEqualWithDifferentArguments(){
 			Assert.AreNotEqual (new Location(0, 0), new Location(1, 1));
 		}
+
+		[Test()]
+		public void CubeCoordinatesWorks(){
+			Assert.AreEqual (new Location (0, 0), new Location(0, 0, 0));
+		}
+
 	}
 }
 

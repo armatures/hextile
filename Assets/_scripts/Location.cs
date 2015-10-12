@@ -15,9 +15,15 @@ namespace Application
 
 		public string summary ()
 		{
-			return String.Format ("({0}, {1})", this.Row, this.Col);
+			var cube = this.CubeCoordinates();
+			return String.Format ("({0}, {1}), or ({2}, {3}, {4})", this.Row, this.Col, cube.x, cube.y, cube.z);
 		}
 
+
+		public CubeCoordinates CubeCoordinates()
+		{
+			return new Application.CubeCoordinates (this.Row, this.Col);
+		}
 
 		//Equals overrides from "Guidelines for Overloading Equals() and Operator == (C# Programming Guide)"
 		public override bool Equals (System.Object obj)

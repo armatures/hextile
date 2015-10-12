@@ -17,9 +17,10 @@ namespace Application
 		public static Board Hexagon (int sideLength, IInstantiator instantiator)
 		{
 			var board = new Board ();
-			var hexagon = new []{new Location (0, 0),new Location (0, 1),
-			new Location (1, 0),new Location (1, 1),new Location (1, 2),
-				new Location(2,0), new Location (2, 1)};
+			var hexagon = new []{
+				new Location(-1,0), new Location (-1, 1),
+				new Location(0,-1), new Location (0, 0),new Location (0, 1),
+			new Location (1, 0),new Location (1, 1)};
 			foreach (Location location in hexagon) {
 				board.AddTile (instantiator, location, new Tile ());
 			}
