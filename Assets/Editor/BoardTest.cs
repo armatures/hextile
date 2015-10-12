@@ -47,23 +47,6 @@ namespace Application
 		}
 
 		[Test()]
-		public void HexagonGivesABoardFullyPopulatedWithRetrievableTiles ()
-		{
-			var board = Board.Hexagon (3, instantiator);
-			var allTiles = new []{
-				new Location (0, 0),new Location (0, 1),
-				new Location (1, 0),new Location (1, 1),new Location (1, 2),
-								  new Location(2,0), new Location (2, 1)
-			};
-			foreach (Location location in allTiles) {
-				Assert.DoesNotThrow (
-					() => board.GetTile (location),
-					String.Format ("no tile found at location {0}, {1}", location.Row, location.Col)
-				);
-			}
-		}
-
-		[Test()]
 		public void InstantiatorIsCalled7TimesForForTheHexagonConstructor()
 		{
 			Board.Hexagon (3, instantiator);
