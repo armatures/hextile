@@ -42,19 +42,20 @@ namespace Application
 		[Test()]
 		public void HexagonGivesABoardWithOriginPopulated ()
 		{
-			var board = Board.Hexagon (3, instantiator);
+			var board = Board.Hexagon (1, instantiator);
 			Assert.NotNull (board.GetTile (new Location (0, 0)));
 		}
 
 		[Test()]
 		public void InstantiatorIsCalled7TimesForForTheHexagonConstructor()
 		{
-			Board.Hexagon (3, instantiator);
+			Board.Hexagon (1, instantiator);
 			Assert.AreEqual (7, instantiator.InstantiatedObjects.Count);
 			
 			//			foreach (var obj in instantiator.InstantiatedObjects) {
 //				Console.WriteLine (obj.name);
 //			}
 		}
+
 	}
 }
