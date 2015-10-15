@@ -18,10 +18,12 @@ namespace Application
 		}
 
 		[Test()]
-		public void CubeCoordinatesWorks(){
+		public void CubeCoordinatesLocationConvertsBackAndForth(){
 			Assert.AreEqual (new Location (0, 0), new Location(0, 0, 0));
+			var hex = new Location (-3, 2);
+			var cube = hex.CubeCoordinates ();
+			Assert.AreEqual (hex, CubeCoordinates.LocationFor (cube.x,cube.y,cube.z));
 		}
-
 	}
 }
 

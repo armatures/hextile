@@ -13,12 +13,15 @@ namespace Application
 			this.Col = col;
 		}
 
+		public Location (int xCube, int yCube,  int zCube){
+			
+		}
+
 		public string summary ()
 		{
 			var cube = this.CubeCoordinates();
 			return String.Format ("({0}, {1}), or ({2}, {3}, {4})", this.Row, this.Col, cube.x, cube.y, cube.z);
 		}
-
 
 		public CubeCoordinates CubeCoordinates()
 		{

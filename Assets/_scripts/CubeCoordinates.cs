@@ -17,6 +17,13 @@ namespace Application
 			this.y = -this.x - this.z;
 		}
 
+		public static Location LocationFor(int x, int y, int z){
+			// convert cube to even-r offset
+			var col = x + (z + (z & 1)) / 2;
+			var row = z;
+			return new Location (row, col);
+		}
+
 		public readonly int x;
 		public readonly int y;
 		public readonly int z;
