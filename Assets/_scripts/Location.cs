@@ -13,8 +13,10 @@ namespace Application
 			this.Col = col;
 		}
 
-		public Location (int xCube, int yCube,  int zCube){
-			
+		public Location(int xCube, int yCube,  int zCube){
+			var location = Application.CubeCoordinates.LocationFor (xCube, yCube, zCube);
+			this.Row = location.Row;
+			this.Col = location.Col;
 		}
 
 		public string summary ()
@@ -59,7 +61,9 @@ namespace Application
 		
 		public override int GetHashCode ()
 		{
-			return Row ^ Col;
+			int hash = 23 * 31 + Row;
+			hash = hash * 31 + Col;
+			return hash;
 		}
 	}
 }

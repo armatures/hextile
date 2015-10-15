@@ -47,7 +47,7 @@ namespace Application
 		}
 
 		[Test()]
-		public void InstantiatorIsCalled7TimesForForTheHexagonConstructor()
+		public void InstantiatorIsCalled7TimesForForTheSmallHexagonConstructor()
 		{
 			Board.Hexagon (1, instantiator);
 			Assert.AreEqual (7, instantiator.InstantiatedObjects.Count);
@@ -56,6 +56,12 @@ namespace Application
 //				Console.WriteLine (obj.name);
 //			}
 		}
-
+		
+		[Test()]
+		public void InstantiatorIsCalled19TimesForForTheLargerHexagonConstructor()
+		{
+			Board.Hexagon (2, instantiator);
+			Assert.AreEqual (19, instantiator.InstantiatedObjects.Count);
+		}
 	}
 }

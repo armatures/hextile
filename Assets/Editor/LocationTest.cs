@@ -24,6 +24,11 @@ namespace Application
 			var cube = hex.CubeCoordinates ();
 			Assert.AreEqual (hex, CubeCoordinates.LocationFor (cube.x,cube.y,cube.z));
 		}
+
+		[Test()]
+		public void CubeCoordinatesLocationsAreDifferent(){
+			Assert.AreNotEqual (new Location (0, 0, 0), new Location (1, 0, -1));
+		}
 	}
 }
 
